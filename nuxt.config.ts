@@ -8,8 +8,11 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  colorMode: {
+    dataValue: "theme",
+  },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxt/eslint", "@nuxt/icon"],
+  modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxtjs/color-mode"],
   eslint: {
     config: {
       standalone: false,
