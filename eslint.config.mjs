@@ -13,6 +13,7 @@ export default withNuxt(antfu({
     semi: true,
     quotes: "double",
   },
+  ignore: ["**/migrations/*", "**/node_modules/**", "**/.nuxt/**", "**/dist/**"],
 }, {
   rules: {
     "ts/no-redeclare": "off",
