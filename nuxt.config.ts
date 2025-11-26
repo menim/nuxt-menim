@@ -15,7 +15,12 @@ export default defineNuxtConfig({
     dataValue: "theme",
   },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxtjs/color-mode"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/icon",
+    "@nuxtjs/color-mode",
+    "@pinia/nuxt",
+  ],
   eslint: {
     config: {
       standalone: false,
