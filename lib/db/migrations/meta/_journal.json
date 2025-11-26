@@ -15,6 +15,13 @@
       "when": 1764055400760,
       "tag": "0001_amused_winter_soldier",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1764095048403,
+      "tag": "0002_wet_kronos",
+      "breakpoints": true
     }
   ]
 }
