@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1764005869078,
-      "tag": "0000_needy_randall",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1764055400760,
-      "tag": "0001_amused_winter_soldier",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "6",
-      "when": 1764095048403,
-      "tag": "0002_wet_kronos",
+      "when": 1766259122751,
+      "tag": "0000_serious_blacklash",
       "breakpoints": true
     }
   ]
