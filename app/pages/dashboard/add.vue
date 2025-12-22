@@ -29,8 +29,7 @@ const onSubmit = handleSubmit(async (values) => {
     if (error.data?.data) {
       setErrors(error.data?.data);
     }
-    submitError.value = error.statusMessage || "An unknown error occurred.";
-    console.log(submitError.value, "#CURRENT LOG");
+    submitError.value = error.data?.statusMessage || error.statusMessage || "An unknown error occurred.";
   }
   loading.value = false;
 });
