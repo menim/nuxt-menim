@@ -1,6 +1,8 @@
 <script setup lang="ts">
-const { data, status } = await useFetch("/api/locations", {
-  lazy: true,
+const locationsStore = useLocationsStore();
+const { locations, status } = storeToRefs(locationsStore);
+onMounted(() => {
+  locationsStore.refresh();
 });
 </script>
 
@@ -12,8 +14,8 @@ const { data, status } = await useFetch("/api/locations", {
     <div v-if="status === 'pending'">
       <span class="loading loading-spinner loading-xl" />
     </div>
-    <div v-else-if="data && data.length > 0" class="flex flex-wrap mt-4 gap-2">
-      <div v-for="location in data" :key="location.id" class="card card-compact h-40 w-72 bg-base-200">
+    <div v-else-if="locations && locations.length > 0" class="flex flex-wrap mt-4 gap-2">
+      <div v-for="location in locations" :key="location.id" class="card card-compact h-40 w-72 bg-base-200">
         <div class="card-body">
           <h3 class="card-title text-xl">
             {{ location.name }}
@@ -24,7 +26,7 @@ const { data, status } = await useFetch("/api/locations", {
     </div>
     <div v-else class="flex flex-col gap-2 mt-4">
       <p>Add a location to get started</p>
-      <NuxtLink to="/dashboard/add" class="btn btn-primary mt-4 w-20">
+      <NuxtLink to="dashboard/add" class="btn btn-primary mt-4 w-20">
         Add Location
         <Icon name="tabler:circle-plus-filled" size="24" class="ml-2" />
       </NuxtLink>
