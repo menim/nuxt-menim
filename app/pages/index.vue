@@ -15,7 +15,11 @@ const authStore = useAuthStore();
           Keep track of your travels and adventures with Menim Travel Log. Log your trips, share your experiences, and explore new destinations all in one place.
         </p>
         <AuthButton v-if="!authStore.user" />
-        <NuxtLink v-else to="/dashboard" class="btn btn-primary">
+        <NuxtLink
+          v-else
+          to="/dashboard"
+          class="btn btn-primary"
+        >
           Start logging
         </NuxtLink>
       </div>
