@@ -4,3 +4,12 @@
     light --default,
     dark --prefersdark;
 }
+
+html[data-theme="dark"] {
+  .maplibregl-popup-content {
+    @apply text-white bg-gray-800;
+  }
+}
+.maplibregl-popup-close-button {
+  @apply px-2;
+}
